@@ -57,7 +57,7 @@ function ProfileScreen( {route, navigation} )
     - Name of the user
     - Username for the user
     - View account information
-    - potentially link to facebook account?
+    - potentially link to facebook account? maybe linkedin, might be too difficult
     - add Maz's easier capability for those that are disabled
 
    also was thinking about maybe the ability to add a light screen mode
@@ -65,6 +65,7 @@ function ProfileScreen( {route, navigation} )
 
     Some more possible features:
       -  allow the ability to post highlights to their friends
+      - show who is friends with a user
        - can chose whether the posts can be viewed by anyone or friends
        - view the users likes
        - view the users following / followers 
@@ -72,8 +73,6 @@ function ProfileScreen( {route, navigation} )
        - look at the profiles behaviors in a box format
     */
 
-
-    
     return (
         <View> 
         <Text>{behaviorList[behaviorIndex].name}</Text>
