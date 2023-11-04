@@ -35,7 +35,10 @@ function SignupScreen() {
 
       setDoc(doc(db,"users",email),{
         email: email,
-        password: password
+        password: password,
+        behaviors: {},
+        behaviorLogs: {} 
+
     })
 
 
