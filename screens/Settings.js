@@ -26,7 +26,9 @@ export default function Settings() {
              <Button title="Vacation Mode?" onPress={logout} color="black"/>
              <Button title="Light Mode" onPress={logout} color="black"/>
              <Button title="Dark Mode" onPress={logout} color="black"/>
-                <Button title="Log Out" onPress={logout} color="black"/>
+             <Button title="Sound Effects ON" onPress={logout} color="black"/>
+             <Button title="Sound Effects OFF" onPress={logout} color="black"/>
+             <Button title="Log Out" onPress={logout} color="black"/>
             </View>
             </View>
 
