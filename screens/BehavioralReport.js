@@ -29,6 +29,10 @@ export default function Report() { //Note: this is a function that is passed in 
         // dispatch(vacationMode());
     }
 
+    function SoundEffects() { // dispatch(soundEffectsAuthTokens());
+        // dispatch(soundEffects());
+    }
+
     function myProfile() { // dispatch(myProfileAuthTokens());
         // dispatch(myProfile());
     }
