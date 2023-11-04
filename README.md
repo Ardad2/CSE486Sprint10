@@ -15,3 +15,9 @@ seems like it has been a consistent comment
 of the sponsors that we arent doing a good
 job alternating whos leading the meeting
 
+Other than that the sponsor eval turned out to be solid
+seems like our communication has improved from
+previous evals.
+Lets continue strong rest of the semester
+
+-max
