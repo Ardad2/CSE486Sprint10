@@ -21,6 +21,7 @@ function BehaviorInput(props) {
         <TextInput 
         style={styles.textInput} 
         placeholder="What did you do today?"
+        // placeholder = "What would you like to achieve tomorrow?"
         
         //Note if it was goalInputHandler() it would get executed as soon as React starts.
 
