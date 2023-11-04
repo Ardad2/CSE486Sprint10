@@ -5,6 +5,8 @@ function BehaviorInput(props) {
 
     const [enteredBehaviorText, setEnteredBehaviorText] = useState('');
 
+
+    // Behavior functions
     function behaviorInputHandler(enteredText) {
         setEnteredBehaviorText(enteredText);
       };
