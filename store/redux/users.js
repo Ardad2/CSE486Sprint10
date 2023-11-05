@@ -142,8 +142,11 @@ const usersSlice = createSlice({
                 }
             }
 
+            console.log("To find: " + action.payload.behaviorName);
+
             for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
+                console.log("Current behavior iterated " + i + " -> " + state.users[index].behaviorLogs[i].name);
                 if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
                     console.log("Found the behavior!");
                     behaviorIndex = i;

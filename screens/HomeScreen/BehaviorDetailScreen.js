@@ -32,7 +32,7 @@ function BehaviorDetailScreen( {route, navigation} )
 
 
     function decrementGoalCount() {
-        console.log("Decreasing!" + nake);
+        console.log("Decreasing!" + name);
         dispatch(decrementBehavior(
             {
                 username: authToken.email,
