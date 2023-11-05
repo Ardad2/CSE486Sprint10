@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
 import { addBehavior, removeBehavior } from '../../store/redux/behaviorLogs';
 
+/* Data below an example for the BehaviorListScreen and will be updated with
+the user's behavior list once the database is connected? */
 const data = [
   {
     data: ["New"]}
