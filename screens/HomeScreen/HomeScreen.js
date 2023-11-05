@@ -38,6 +38,11 @@ const userList = useSelector( (state) => state.users.users);
 const currUser = userList.filter(user => user.username == authToken.email);
 const behaviorList = currUser[0].behaviorLogs;
 
+/*
+Below is example calendar behaviors.
+Will be getting rid of once the database is connected
+and it will show behaviors based off your account info.
+*/
 const sampleEvents = [
   { 'date': '2023-10-17', 'name': 'Walk my dog', 'count': '0', 'goalCount': '0' },
   { 'date': '2020-03-24', 'name': 'Doctor\'s appointment' , 'count': '0', 'goalCount': '0'},
