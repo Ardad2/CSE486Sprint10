@@ -137,6 +137,7 @@ const usersSlice = createSlice({
             for (var i = 0; i < state.users.length ; i++)
             {                
                 if (state.users[i].username == (action.payload.username)) {
+                    console.log("Found the user!");
                     index = i;
                 }
             }
@@ -149,7 +150,7 @@ const usersSlice = createSlice({
                 }
             }
 
-            if (i != -1)
+            if (behaviorIndex != -1)
             {
             console.log("Initial count: " + state.users[index].behaviorLogs[behaviorIndex].count);
 
