@@ -59,7 +59,7 @@ const usersSlice = createSlice({
                 count: 0,
                 goalCount: 40,
                 memo: "",
-                date: "2023-10-16",
+                date: "2023-11-04",
                 type: "YES"
             });
             state.users[newId].behaviorLogs.push({
@@ -69,7 +69,7 @@ const usersSlice = createSlice({
                 count: 0,
                 goalCount: 30,
                 memo: "",
-                date: "2023-10-16",
+                date: "2023-11-03",
                 type: "YES"
             });
             state.users[newId].behaviorLogs.push({
@@ -79,7 +79,7 @@ const usersSlice = createSlice({
                 count: 0,
                 goalCount: 100,
                 memo: "",
-                date: "2023-10-14",
+                date: "2023-11-03",
                 type: "YES"
             });
             state.users[newId].behaviorLogs.push({
@@ -89,7 +89,7 @@ const usersSlice = createSlice({
                 count: 0,
                 goalCount: 40,
                 memo: "",
-                date: "2023-10-12",
+                date: "2023-10-29",
                 type: "YES"
             });
         

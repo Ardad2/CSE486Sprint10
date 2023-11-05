@@ -88,12 +88,12 @@ const WeeklyCalendar = props => {
                 } else {
                     eventViews = events.map((event, j) => {
                         return (
-                            <View key={i + "-" + j}>
+                            <View key={i + "-" + j} onPress={pressHandler}>
                                 <View style={styles.event}>
                                     <View style={styles.eventNote}>
                                         <Text style={styles.eventText}>{event.name}</Text>
                                     </View>
-                                    <View style={styles.eventNote}>
+                                    <View style={styles.eventNote} >
                                         <Text style={styles.eventText}>{event.count}/{event.goalCount}</Text>
                                     </View>
                                 </View>
@@ -103,7 +103,8 @@ const WeeklyCalendar = props => {
                     })
                 }
             }
-
+            
+            
             let dayView = undefined
             if (props.renderDay !== undefined) {
                 if (props.renderFirstDay !== undefined && i === 0) dayView = props.renderFirstDay(eventViews, weekdayToAdd, i)
@@ -188,10 +189,10 @@ const WeeklyCalendar = props => {
         if (props.onDayPress !== undefined) props.onDayPress(weekday.clone(), i)
     }
 
-   /* function pressHandler() {
+   /*function pressHandler() {
         props.onPress(event.name)
-      }
-      */
+      }*/
+      
 
     return (
         <View style={[styles.component, props.style]}>
