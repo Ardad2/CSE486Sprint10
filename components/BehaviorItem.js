@@ -20,7 +20,6 @@ function BehaviorItem(props) {
         > 
         <View> 
         <Text style={styles.behaviorText}>{props.name} {props.count}/{props.goalCount}</Text>
-        <Text style={styles.behaviorText}>{props.date}</Text>
         </View>
         </Pressable>
         </View>
