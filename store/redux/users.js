@@ -149,6 +149,7 @@ const usersSlice = createSlice({
                     behaviorIndex = i;
                 }
             }
+            console.log(i);
 
             if (behaviorIndex != -1)
             {
