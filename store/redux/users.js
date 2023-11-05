@@ -132,7 +132,7 @@ const usersSlice = createSlice({
             
 
             var index = 0;
-            var behaviorIndex = 0;
+            var behaviorIndex = -1;
 
             for (var i = 0; i < state.users.length ; i++)
             {                
@@ -149,12 +149,14 @@ const usersSlice = createSlice({
                 }
             }
 
-
+            if (i != -1)
+            {
             console.log("Initial count: " + state.users[index].behaviorLogs[behaviorIndex].count);
 
             state.users[index].behaviorLogs[behaviorIndex].count++;
 
             console.log("New count: " + state.users[index].behaviorLogs[behaviorIndex].count);
+            }
 
 
         },
