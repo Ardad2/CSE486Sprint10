@@ -147,9 +147,12 @@ const usersSlice = createSlice({
             for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
                 console.log("Current behavior iterated " + i + " -> " + state.users[index].behaviorLogs[i].name);
-                if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
+                if (state.users[index].behaviorLogs[i].name == (action.payload.behaviorName)) {
                     console.log("Found the behavior!");
                     behaviorIndex = i;
+                }
+                else {
+                    console.log(action.payload.behaviorName +"!=" )
                 }
             }
             console.log(i);
