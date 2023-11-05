@@ -8,9 +8,7 @@ import { authenticateAuthTokens, logoutAuthTokens } from '../../store/redux/auth
 import { addUser } from '../../store/redux/users';
 
 
-
 function LoginScreen() {
-
 
   const authToken = useSelector( (state) => state.authTokens.data[0]); 
 
@@ -53,6 +51,8 @@ function LoginScreen() {
     setIsAuthenticating(false);
   }
 
+  /* Can add a loading screen for when the user has successfully signed into their account and is being 
+  taken to their home page? */
   if (isAuthenticating) {
     return <LoadingOverlay message="Logging you in..." />;
   }
