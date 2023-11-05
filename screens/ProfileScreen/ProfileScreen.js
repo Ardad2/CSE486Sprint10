@@ -62,6 +62,8 @@ function ProfileScreen( {route, navigation} )
 
    also was thinking about maybe the ability to add a light screen mode
     or a dark screen mode since that is quite popular recently
+        - If not too difficult, can also add an option that syncs the theme to the theme of the user's 
+        phone (i.e. if the user's phone is dark mode, then the app will be in dark mode)
 
     Some more possible features:
       -  allow the ability to post highlights to their friends
