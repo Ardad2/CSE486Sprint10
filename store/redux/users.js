@@ -144,13 +144,17 @@ const usersSlice = createSlice({
             for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
                 if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
+                    console.log("Found the behavior!");
                     behaviorIndex = i;
                 }
             }
 
 
+            console.log("Initial count: " + state.users[index].behaviorLogs[behaviorIndex].count);
 
             state.users[index].behaviorLogs[behaviorIndex].count++;
+
+            console.log("New count: " + state.users[index].behaviorLogs[behaviorIndex].count);
 
 
         },
