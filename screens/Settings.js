@@ -23,11 +23,16 @@ Below is the buttons for navigating to:
  - Light Mode
  - Dark Mode
  - Sound Effects on/off
+ -Logging out
  
  Still need to create a settings
  page that is pleasing to look at.
  Also buttons is more convenient
  than filter drop downs.
+ 
+ Potentially want to be able to edit your 
+ username, and name, profile pic, in the settings
+ page as well. but could also do that on the profile itself.
  */
   return (
     <View style={styles.container}>
