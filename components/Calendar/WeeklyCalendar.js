@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, ScrollView, TouchableOpacity, TouchableWithoutFeedback, Modal, Platform, ActivityIndicator, Pressable } from 'react-native';
+import { Text, View, ScrollView, TouchableOpacity, TouchableWithoutFeedback, Modal, Platform, ActivityIndicator, Pressable, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment/min/moment-with-locales';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -18,10 +18,11 @@ const WeeklyCalendar = props => {
 
     const navigation = useNavigation();
 
+
+
     function pressHandler(name) {
         navigation.navigate("BehaviorDetailScreen", { name: name});
       }
-
 
 
 
@@ -88,15 +89,19 @@ const WeeklyCalendar = props => {
                 } else {
                     eventViews = events.map((event, j) => {
                         return (
-                            <View key={i + "-" + j} onPress={pressHandler}>
-                                <View style={styles.event}>
-                                    <View style={styles.eventNote}>
-                                        <Text style={styles.eventText}>{event.name}</Text>
-                                    </View>
-                                    <View style={styles.eventNote} >
-                                        <Text style={styles.eventText}>{event.count}/{event.goalCount}</Text>
-                                    </View>
-                                </View>
+                            <View key={i + "-" + j}>
+                        <BehaviorItem 
+
+                        id = {event.id}
+                        name = {event.name}
+                        icon={event.icon}
+                        count={event.count}
+                        goalCount={event.goalCount}
+                        memo={event.memo}
+                        date={event.date}
+                        type={event.type}
+                        onPress={pressHandler}
+                        />
                                 {j < events.length - 1 && <View style={styles.lineSeparator} />}
                             </View>
                         )
@@ -120,10 +125,33 @@ const WeeklyCalendar = props => {
                         <View style={[styles.allEvents, eventViews.length === 0 ? { width: '100%', backgroundColor: 'lightgrey' } : {}]}>
                         <Pressable 
                             android_ripple ={{color:'#210644'}}
-                            onPress={pressHandler}
                             > 
                             {eventViews}
                             </Pressable>
+
+                                  <View style={styles.behaviorsContainer}>
+        <FlatList data={eventViews} renderItem = {itemData => {
+          return <BehaviorItem 
+
+          id = {itemData.id}
+          name = {itemData.name}
+          icon={itemData.icon}
+          count={itemData.count}
+          goalCount={itemData.goalCount}
+          memo={itemData.item.memo}
+          date={itemData.item.date}
+          type={itemData.item.type}
+
+
+          onPress={pressHandler}
+          />
+
+        }}
+        keyExtractor={(item,index) => {return item.id}} 
+        alwaysBounceVertical={true}
+        /> 
+        </View>
+
                         </View>
                     </View>
                 )
@@ -151,7 +179,6 @@ const WeeklyCalendar = props => {
         createWeekdays(nextWeekCurrDate.clone(), eventMap)
         setCalendarReady(true)
     }
-
     const isSelectedDate = date => {
         return (selectedDate.year() === date.year() && selectedDate.month() === date.month() && selectedDate.date() === date.date())
     }
