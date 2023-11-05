@@ -102,7 +102,6 @@ const WeeklyCalendar = props => {
                         type={event.type}
                         onPress={pressHandler}
                         />
-                                {j < events.length - 1 && <View style={styles.lineSeparator} />}
                             </View>
                         )
                     })
@@ -129,28 +128,6 @@ const WeeklyCalendar = props => {
                             {eventViews}
                             </Pressable>
 
-                                  <View style={styles.behaviorsContainer}>
-        <FlatList data={eventViews} renderItem = {itemData => {
-          return <BehaviorItem 
-
-          id = {itemData.id}
-          name = {itemData.name}
-          icon={itemData.icon}
-          count={itemData.count}
-          goalCount={itemData.goalCount}
-          memo={itemData.item.memo}
-          date={itemData.item.date}
-          type={itemData.item.type}
-
-
-          onPress={pressHandler}
-          />
-
-        }}
-        keyExtractor={(item,index) => {return item.id}} 
-        alwaysBounceVertical={true}
-        /> 
-        </View>
 
                         </View>
                     </View>
