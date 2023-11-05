@@ -5,6 +5,8 @@ import moment from 'moment/min/moment-with-locales';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { applyLocale, displayTitleByLocale } from './Locale';
 import { useNavigation } from '@react-navigation/native';
+import { useSelector, dispatch, useDispatch } from 'react-redux';
+
 
 import BehaviorItem from '../../components/BehaviorItem';
 
@@ -23,6 +25,10 @@ const WeeklyCalendar = props => {
     function pressHandler(name) {
         navigation.navigate("BehaviorDetailScreen", { name: name});
       }
+
+      const authToken = useSelector( (state) => state.authTokens.data[0]); 
+      const userList = useSelector( (state) => state.users.users);
+const currUser = userList.filter(user => user.username == authToken.email);
 
 
 
@@ -46,7 +52,7 @@ const WeeklyCalendar = props => {
         //applyLocale(props.locale, cancelText => setCancelText(cancelText), confirmText => setConfirmText(confirmText))
         setCancelText('Cancel');
         setConfirmText('Confirm');
-        createEventMap(props.events)
+        createEventMap(currUser[0].behaviorLogs)
         setCalendarReady(true)
     }, [])
 

@@ -40,18 +40,6 @@ const behaviorList = currUser[0].behaviorLogs;
 
 /* Below are examples for calendar behaviors which are not based off of actual user info. 
 Once the database is connected, the behavior information will be based off of the user's info */
-const sampleEvents = [
-  { 'date': '2023-10-17', 'name': 'Walk my dog', 'count': '0', 'goalCount': '0' },
-  { 'date': '2020-03-24', 'name': 'Doctor\'s appointment' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-25', 'name': 'Morning exercise', 'count': '0', 'goalCount': '0' },
-  { 'date': '2020-03-25', 'name': 'Meeting with client' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-25', 'name': 'Dinner with family' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-26', 'name': 'Schedule 1' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-26', 'name': 'Schedule 2', 'count': '0', 'goalCount': '0' },
-  { 'date': '2020-03-26','name': 'Schedule 3' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-26', 'name': 'Schedule 4' , 'count': '0', 'goalCount': '0'},
-  { 'date': '2020-03-26', 'name': 'Schedule 5', 'count': '0', 'goalCount': '0' }
-]
 
 
   const [ date, setDate ] = useState(null);
