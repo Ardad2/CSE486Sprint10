@@ -176,9 +176,11 @@ const usersSlice = createSlice({
                 }
             }
 
+            console.log("To find behavior: " + action.payload.behaviorName);
+
             for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
-                if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
+                if (state.users[index].behaviorLogs[i].name == (action.payload.behaviorName)) {
                     behaviorIndex = i;
                 }
             }
