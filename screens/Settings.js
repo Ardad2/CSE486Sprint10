@@ -16,7 +16,19 @@ export default function Settings() {
     dispatch(logoutAuthTokens());
  }
 
-
+/*
+Below is the buttons for navigating to:
+ - Profile
+ - Vacation Mode
+ - Light Mode
+ - Dark Mode
+ - Sound Effects on/off
+ 
+ Still need to create a settings
+ page that is pleasing to look at.
+ Also buttons is more convenient
+ than filter drop downs.
+ */
   return (
     <View style={styles.container}>
       <Text></Text>
