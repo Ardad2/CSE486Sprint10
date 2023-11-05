@@ -54,6 +54,7 @@ function ProfileScreen( {route, navigation} )
         - some behaviors might not want to be displayed on the profile
         - or show behaviors of importance to the user, maybe more proud of some than others
     - Bio for the user
+        - Bio section can include name, about me, start and end goals, etc.
     - Name of the user
     - Username for the user
     - View account information
